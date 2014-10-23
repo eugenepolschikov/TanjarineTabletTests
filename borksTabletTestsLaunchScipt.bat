@@ -1,4 +1,4 @@
-cd  /d E:\exadel_projects\TouchtunesAutomation\AndroidAutomation\TanjarineTabletTests
+cd  /d E:\exadel_projects\TouchtunesAutomation\TouchtunesAndroidSideTestsGitHubRepo\TanjarineTabletTests
 call android.bat create uitest-project -n TanjarineTabletTests -t 17 -p .
 call ant build
 adb  push ./bin/TanjarineTabletTests.jar /data/local/tmp
