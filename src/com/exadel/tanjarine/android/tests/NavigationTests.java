@@ -29,7 +29,7 @@ public class NavigationTests extends  HighLevelNavigationBetweekAPKsMethods {
 
 		UiObject  assignButton= new UiObject(new UiSelector().className(android.widget.Button.class.getName()).index(4));
 		try {
-			assignButton.clickAndWaitForNewWindow(2000);
+			assignButton.clickAndWaitForNewWindow(6000);
 		} catch (UiObjectNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -63,17 +63,39 @@ public class NavigationTests extends  HighLevelNavigationBetweekAPKsMethods {
 		// back button navigate
 		getUiDevice().pressBack();
 
+
 	}  
 
 	public void test3DropExistingTable() throws UiObjectNotFoundException{
 
 
 		// back button navigate to unwake the device
-		getUiDevice().pressBack();
+		//getUiDevice().pressBack();
 
 		//call server click 
 		
-		UiObject  callServerIcon= new UiObject(new UiSelector().className(android.widget.ImageView.class.getName()));
+		//UiObject  callServerIcon= new UiObject(new UiSelector().className(android.widget.TextView.class.getName()));
+		
+		/*
+		UiObject  callServerIcon=new UiObject(
+				 new UiSelector()
+		   .className("android.widget.RelativeLayout").instance(1)
+		   .childSelector(new UiSelector().className("android.widget.ImageView"))
+		   );
+		*/
+		
+		
+		UiObject  callServerIcon=new UiObject(
+				new UiSelector().className("android.widget.ImageView").longClickable(true)
+		   
+		   );
+		
+		
+		
+		/*UiObject  callServerIcon=new UiObject(
+				new UiSelector().className("android.widget.TextView").fromParent(
+						new UiSelector().className("android.widget.RelativeLayout")));*/
+		
 		callServerIcon.longClick();
 		
 	
