@@ -1,0 +1,117 @@
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=UiAutomatorTestRunner
+INSTRUMENTATION_STATUS: class=com.exadel.tanjarine.android.tests.NavigationTests
+INSTRUMENTATION_STATUS: stream=
+com.exadel.tanjarine.android.tests.NavigationTests:
+INSTRUMENTATION_STATUS: numtests=3
+INSTRUMENTATION_STATUS: test=test1NewTableAssignment
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=UiAutomatorTestRunner
+INSTRUMENTATION_STATUS: class=com.exadel.tanjarine.android.tests.NavigationTests
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: numtests=3
+INSTRUMENTATION_STATUS: test=test1NewTableAssignment
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=UiAutomatorTestRunner
+INSTRUMENTATION_STATUS: class=com.exadel.tanjarine.android.tests.NavigationTests
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: numtests=3
+INSTRUMENTATION_STATUS: test=test2DashboardEmenuNavigate
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=UiAutomatorTestRunner
+INSTRUMENTATION_STATUS: class=com.exadel.tanjarine.android.tests.NavigationTests
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: numtests=3
+INSTRUMENTATION_STATUS: test=test2DashboardEmenuNavigate
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=UiAutomatorTestRunner
+INSTRUMENTATION_STATUS: class=com.exadel.tanjarine.android.tests.NavigationTests
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: numtests=3
+INSTRUMENTATION_STATUS: test=test3DropExistingTable
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=UiAutomatorTestRunner
+INSTRUMENTATION_STATUS: class=com.exadel.tanjarine.android.tests.NavigationTests
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: numtests=3
+INSTRUMENTATION_STATUS: test=test3DropExistingTable
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: stream=
+Test results for WatcherResultPrinter=...
+Time: 22.704
+
+OK (3 tests)
+
+
+INSTRUMENTATION_STATUS_CODE: -1
+======2nd suite: Carousel,drink section tests ===============   
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=UiAutomatorTestRunner
+INSTRUMENTATION_STATUS: class=com.exadel.tanjarine.android.tests.DrinksCarouselTests
+INSTRUMENTATION_STATUS: stream=
+com.exadel.tanjarine.android.tests.DrinksCarouselTests:
+INSTRUMENTATION_STATUS: numtests=4
+INSTRUMENTATION_STATUS: test=test1TableAssign
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=UiAutomatorTestRunner
+INSTRUMENTATION_STATUS: class=com.exadel.tanjarine.android.tests.DrinksCarouselTests
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: numtests=4
+INSTRUMENTATION_STATUS: test=test1TableAssign
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=UiAutomatorTestRunner
+INSTRUMENTATION_STATUS: class=com.exadel.tanjarine.android.tests.DrinksCarouselTests
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: numtests=4
+INSTRUMENTATION_STATUS: test=test2NavigateToDrinks
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=UiAutomatorTestRunner
+INSTRUMENTATION_STATUS: class=com.exadel.tanjarine.android.tests.DrinksCarouselTests
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: numtests=4
+INSTRUMENTATION_STATUS: test=test2NavigateToDrinks
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=UiAutomatorTestRunner
+INSTRUMENTATION_STATUS: class=com.exadel.tanjarine.android.tests.DrinksCarouselTests
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: numtests=4
+INSTRUMENTATION_STATUS: test=test3PickupCarouselSectionAndSwipe
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=UiAutomatorTestRunner
+INSTRUMENTATION_STATUS: class=com.exadel.tanjarine.android.tests.DrinksCarouselTests
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: numtests=4
+INSTRUMENTATION_STATUS: test=test3PickupCarouselSectionAndSwipe
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS: id=UiAutomatorTestRunner
+INSTRUMENTATION_STATUS: class=com.exadel.tanjarine.android.tests.DrinksCarouselTests
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: numtests=4
+INSTRUMENTATION_STATUS: test=test4GetBackToDashboardAndDropTheTable
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS: id=UiAutomatorTestRunner
+INSTRUMENTATION_STATUS: class=com.exadel.tanjarine.android.tests.DrinksCarouselTests
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: numtests=4
+INSTRUMENTATION_STATUS: test=test4GetBackToDashboardAndDropTheTable
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: stream=
+Test results for WatcherResultPrinter=....
+Time: 54.597
+
+OK (4 tests)
+
+
+INSTRUMENTATION_STATUS_CODE: -1
