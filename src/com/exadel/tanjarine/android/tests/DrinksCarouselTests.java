@@ -44,16 +44,37 @@ public class DrinksCarouselTests extends HighLevelNavigationBetweekAPKsMethods {
 		// carousel swipe implementation (LEFT direction)
 		carouselSwipe(carousel, timesToScroll, leftDirectionToScroll);
 
+	
+	}
+	
+	public void   test4swipeCarouselFastInBothDirections() throws UiObjectNotFoundException, InterruptedException{
+		
+		String carouselClass = "org.lucasr.twowayview.TwoWayView";
+
+		UiScrollable carousel = new UiScrollable(new UiSelector().className(
+				carouselClass).scrollable(true));
+
+		
+//		final int STEPS_TO_SWIPE=carousel.getMaxSearchSwipes();
+		final int STEPS_TO_SWIPE=8;
+		
+		carousel.swipeLeft(STEPS_TO_SWIPE);
+		Thread.sleep(3000);
+		carousel.swipeRight(STEPS_TO_SWIPE);
+		Thread.sleep(3000);
+
+		
+	}
+
+	public void test5GetBackToDashboardAndDropTheTable()
+			throws UiObjectNotFoundException {
+
 		// getting back to dashboard
 		getUiDevice().pressBack();
 		getUiDevice().pressBack();
 		getUiDevice().pressBack();
 
-	}
-
-	public void test4GetBackToDashboardAndDropTheTable()
-			throws UiObjectNotFoundException {
-
+		
 		dropTableFromDashboard();
 	}
 

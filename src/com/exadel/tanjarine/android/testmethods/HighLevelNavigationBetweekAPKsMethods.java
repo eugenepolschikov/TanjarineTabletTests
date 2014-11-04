@@ -9,7 +9,8 @@ import com.android.uiautomator.testrunner.UiAutomatorTestCase;
 
 public class HighLevelNavigationBetweekAPKsMethods extends UiAutomatorTestCase {
 
-	protected UiObject uiElementInit(UiSelector selector) {
+	protected UiObject uiElementInit(UiSelector selector)
+			throws UiObjectNotFoundException {
 		return new UiObject(selector);
 	}
 
@@ -41,7 +42,7 @@ public class HighLevelNavigationBetweekAPKsMethods extends UiAutomatorTestCase {
 			throws UiObjectNotFoundException {
 		UiObject foodeMenu = uiElementInit(new UiSelector().text(textPattern));
 
-		foodeMenu.clickAndWaitForNewWindow(3000);
+		foodeMenu.clickAndWaitForNewWindow(4000);
 	}
 
 	public void newTableAssign(String tableName)
@@ -83,6 +84,30 @@ public class HighLevelNavigationBetweekAPKsMethods extends UiAutomatorTestCase {
 					"android.widget.ImageView").instance(directionSet));
 
 			drinkItem.clickAndWaitForNewWindow(1500);
+		}
+
+	}
+
+	public boolean isItemPresent(UiSelector selector) {
+
+		try {
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			UiObject testItem=	uiElementInit(selector);
+			android.graphics.Rect a=testItem.getBounds();
+			UiSelector b=testItem.getSelector();
+			android.graphics.Rect c = testItem.getVisibleBounds();
+			
+			return true;
+		}
+
+		catch (UiObjectNotFoundException e) {
+			// TODO Auto-generated catch block
+			return false;
 		}
 
 	}

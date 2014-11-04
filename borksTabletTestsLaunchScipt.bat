@@ -20,13 +20,13 @@
 
 ::2nd alternative using batchTee approach from here:   http://stackoverflow.com/questions/11239924/windows-batch-tee-command
 cd  /d E:\exadel_projects\TouchtunesAutomation\TouchtunesAndroidSideTestsGitHubRepo\TanjarineTabletTests   | batchTee testResults.txt
-call android.bat create uitest-project -n TanjarineTabletTests -t 17 -p . 
-call ant build 
-adb  push ./bin/TanjarineTabletTests.jar /data/local/tmp 
+call android.bat create uitest-project -n TanjarineTabletTests -t 17 -p .   
+call ant build  
+adb  push ./bin/TanjarineTabletTests.jar /data/local/tmp    | batchTee testResults.txt + 
 echo ======1st suite: Navigation tests ===============   | batchTee testResults.txt + 
 adb shell uiautomator runtest TanjarineTabletTests.jar -c com.exadel.tanjarine.android.tests.NavigationTests  | batchTee testResults.txt +
 echo ======2nd suite: Carousel,drink section tests ===============   | batchTee testResults.txt +
 adb shell uiautomator runtest TanjarineTabletTests.jar -c com.exadel.tanjarine.android.tests.DrinksCarouselTests  | batchTee testResults.txt +
-
+echo ======test suites execution finished! ===============   | batchTee testResults.txt +
 
 pause
