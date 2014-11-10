@@ -23,47 +23,15 @@ public class DrinksCarouselTests extends HighLevelNavigationBetweekAPKsMethods {
 
 	public void test3PickupCarouselSectionAndSwipe()
 			throws UiObjectNotFoundException {
-		String carouselSectionName = "FEATURED DRINKS";
-		navigateByText(carouselSectionName);
+		rollingCarouselInBothDirections();
 
-		String carouselClass = "org.lucasr.twowayview.TwoWayView";
-
-		UiScrollable carousel = new UiScrollable(new UiSelector().className(
-				carouselClass).scrollable(true));
-
-		int carouselLength = carousel.getChildCount(new UiSelector()
-				.className("android.widget.ImageView"));
-
-		int timesToScroll = carouselLength + 2;
-		int rightDirectinoToScroll = 1;
-		int leftDirectionToScroll = -1;
-
-		// carousel swipe implementation (RIGHT direction)
-		carouselSwipe(carousel, timesToScroll, rightDirectinoToScroll);
-
-		// carousel swipe implementation (LEFT direction)
-		carouselSwipe(carousel, timesToScroll, leftDirectionToScroll);
-
-	
 	}
-	
-	public void   test4swipeCarouselFastInBothDirections() throws UiObjectNotFoundException, InterruptedException{
-		
-		String carouselClass = "org.lucasr.twowayview.TwoWayView";
 
-		UiScrollable carousel = new UiScrollable(new UiSelector().className(
-				carouselClass).scrollable(true));
+	public void test4swipeCarouselFastInBothDirections()
+			throws UiObjectNotFoundException, InterruptedException {
 
-		
-//		final int STEPS_TO_SWIPE=carousel.getMaxSearchSwipes();
-		final int STEPS_TO_SWIPE=8;
-		
-		carousel.swipeLeft(STEPS_TO_SWIPE);
-		Thread.sleep(3000);
-		carousel.swipeRight(STEPS_TO_SWIPE);
-		Thread.sleep(3000);
+		carouselLongSwipe();
 
-		
 	}
 
 	public void test5GetBackToDashboardAndDropTheTable()
@@ -74,7 +42,6 @@ public class DrinksCarouselTests extends HighLevelNavigationBetweekAPKsMethods {
 		getUiDevice().pressBack();
 		getUiDevice().pressBack();
 
-		
 		dropTableFromDashboard();
 	}
 

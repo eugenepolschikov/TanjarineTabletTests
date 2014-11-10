@@ -37,8 +37,7 @@ INSTRUMENTATION_STATUS: numtests=4
 INSTRUMENTATION_STATUS: test=test3HeaderMenuCategoriesNavigation
 INSTRUMENTATION_STATUS_CODE: 1
 INSTRUMENTATION_STATUS: current=3
-INSTRUMENTATION_STATUS: id=UiAutomat
-orTestRunner
+INSTRUMENTATION_STATUS: id=UiAutomatorTestRunner
 INSTRUMENTATION_STATUS: class=com.exadel.tanjarine.android.tests.NavigationTests
 INSTRUMENTATION_STATUS: stream=.
 INSTRUMENTATION_STATUS: numtests=4
@@ -60,7 +59,7 @@ INSTRUMENTATION_STATUS: test=test4DropExistingTable
 INSTRUMENTATION_STATUS_CODE: 0
 INSTRUMENTATION_STATUS: stream=
 Test results for WatcherResultPrinter=....
-Time: 55.413
+Time: 39.811
 
 OK (4 tests)
 
@@ -140,7 +139,7 @@ INSTRUMENTATION_STATUS: test=test5GetBackToDashboardAndDropTheTable
 INSTRUMENTATION_STATUS_CODE: 0
 INSTRUMENTATION_STATUS: stream=
 Test results for WatcherResultPrinter=.....
-Time: 62.432
+Time: 61.192
 
 OK (5 tests)
 

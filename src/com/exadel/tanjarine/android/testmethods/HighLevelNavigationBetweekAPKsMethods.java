@@ -61,7 +61,7 @@ public class HighLevelNavigationBetweekAPKsMethods extends UiAutomatorTestCase {
 
 	}
 
-	public void carouselSwipe(UiScrollable carousel, int timesToScroll,
+	public void carouselSingleSwipe(UiScrollable carousel, int timesToScroll,
 			int direction) throws UiObjectNotFoundException {
 
 		int carouselLength = carousel.getChildCount(new UiSelector()
@@ -97,11 +97,11 @@ public class HighLevelNavigationBetweekAPKsMethods extends UiAutomatorTestCase {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			UiObject testItem=	uiElementInit(selector);
-			android.graphics.Rect a=testItem.getBounds();
-			UiSelector b=testItem.getSelector();
+			UiObject testItem = uiElementInit(selector);
+			android.graphics.Rect a = testItem.getBounds();
+			UiSelector b = testItem.getSelector();
 			android.graphics.Rect c = testItem.getVisibleBounds();
-			
+
 			return true;
 		}
 
@@ -110,6 +110,151 @@ public class HighLevelNavigationBetweekAPKsMethods extends UiAutomatorTestCase {
 			return false;
 		}
 
+	}
+
+	public void carouselLongSwipe() throws UiObjectNotFoundException,
+			InterruptedException {
+		String carouselClass = "org.lucasr.twowayview.TwoWayView";
+
+		UiScrollable carousel = new UiScrollable(new UiSelector().className(
+				carouselClass).scrollable(true));
+
+		// final int STEPS_TO_SWIPE=carousel.getMaxSearchSwipes();
+		final int STEPS_TO_SWIPE = 8;
+
+		carousel.swipeLeft(STEPS_TO_SWIPE);
+		Thread.sleep(3000);
+		carousel.swipeRight(STEPS_TO_SWIPE);
+		Thread.sleep(3000);
+	}
+
+	public void rollingCarouselInBothDirections()
+			throws UiObjectNotFoundException {
+		String carouselSectionName = "FEATURED DRINKS";
+		navigateByText(carouselSectionName);
+
+		String carouselClass = "org.lucasr.twowayview.TwoWayView";
+
+		UiScrollable carousel = new UiScrollable(new UiSelector().className(
+				carouselClass).scrollable(true));
+
+		int carouselLength = carousel.getChildCount(new UiSelector()
+				.className("android.widget.ImageView"));
+
+		int timesToScroll = carouselLength + 2;
+		int rightDirectinoToScroll = 1;
+		int leftDirectionToScroll = -1;
+
+		// carousel swipe implementation (RIGHT direction)
+		carouselSingleSwipe(carousel, timesToScroll, rightDirectinoToScroll);
+
+		// carousel swipe implementation (LEFT direction)
+		carouselSingleSwipe(carousel, timesToScroll, leftDirectionToScroll);
+	}
+
+	public void headerNavigateOverFoodCategories()
+			throws UiObjectNotFoundException {
+		String headerFoodItemsScrolling = "android.widget.HorizontalScrollView";
+
+		UiScrollable foodHeader = new UiScrollable(new UiSelector().className(
+				headerFoodItemsScrolling).scrollable(true));
+
+		// @Todo :get list of items that are not expected to be clicked
+
+		// DIRECTION of header categories clicking: from LEFT to RIGHT!
+		// subFocus - first category select
+
+		// ============== FIRST PART SCROLLING ====================
+		UiObject firstFoodCategory = foodHeader.getChild(new UiSelector()
+				.className("android.widget.TextView").instance(0));
+
+		firstFoodCategory.clickAndWaitForNewWindow(1000);
+
+		int headerItemsNum = foodHeader.getChildCount(new UiSelector()
+				.className("android.widget.TextView"));
+
+		String flag1 = "";
+		String flag2 = "";
+
+		if (headerItemsNum >= 5) {
+			// starting counter from 1 as 0 index has been previously selected
+			for (int i = 1; i < 5; i++) {
+				UiObject foodSectionTitle = foodHeader
+						.getChild(new UiSelector().className(
+								"android.widget.TextView").instance(i));
+
+				foodSectionTitle.clickAndWaitForNewWindow(1000);
+			}
+
+			// setting text for 6th item
+
+			UiObject foodGroup6th = foodHeader.getChild(new UiSelector()
+					.className("android.widget.TextView").instance(5));
+
+			flag1 = foodGroup6th.getText().trim();
+			foodGroup6th.clickAndWaitForNewWindow(1000);
+
+			foodHeader = new UiScrollable(new UiSelector().className(
+					headerFoodItemsScrolling).scrollable(true));
+			flag2 = foodHeader
+					.getChild(
+							new UiSelector().className(
+									"android.widget.TextView").instance(5))
+					.getText().trim();
+
+			int foodHeaderLength = foodHeader.getChildCount(new UiSelector()
+					.className("android.widget.TextView"));
+
+			while (!flag2.equals(flag1)) {
+				flag1 = flag2;
+				foodHeader.getChild(
+						new UiSelector().className("android.widget.TextView")
+								.instance(foodHeaderLength - 5))
+						.clickAndWaitForNewWindow(2000);
+				foodHeader = new UiScrollable(new UiSelector().className(
+						headerFoodItemsScrolling).scrollable(true));
+				foodHeaderLength = foodHeader.getChildCount(new UiSelector()
+						.className("android.widget.TextView"));
+
+				flag2 = foodHeader
+						.getChild(
+								new UiSelector().className(
+										"android.widget.TextView").instance(
+										foodHeaderLength - 5)).getText().trim();
+			}
+
+			// =========== SCROLLING THE LAST PART OF HEADER
+			// =====================
+			UiObject toClick;
+			for (int count = foodHeaderLength - 4; count < foodHeaderLength - 2; count++) {
+
+				toClick = foodHeader.getChild(new UiSelector().className(
+						"android.widget.TextView").instance(count));
+
+				toClick.clickAndWaitForNewWindow(2000);
+
+				foodHeader = new UiScrollable(new UiSelector().className(
+						headerFoodItemsScrolling).scrollable(true));
+				foodHeaderLength = foodHeader.getChildCount(new UiSelector()
+						.className("android.widget.TextView"));
+
+			}
+
+			// ============== SCROLLING OF HEADER is ENDED; END IF ============
+
+		}
+
+		// ========= in case header categories NUM is small number
+		else if (headerItemsNum < 5) {
+			for (int i = 1; i < headerItemsNum; i++) {
+				UiObject foodSectionTitle = foodHeader
+						.getChild(new UiSelector().className(
+								"android.widget.TextView").instance(i));
+
+				foodSectionTitle.clickAndWaitForNewWindow(1000);
+			}
+
+		}
 	}
 
 }
