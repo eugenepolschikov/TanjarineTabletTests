@@ -4,9 +4,9 @@
 	<classpathentry kind="src" path="externalLibs"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/3"/>
-	<classpathentry kind="lib" path="C:/Program Files/adt_Android_SDK/sdk/platforms/android-17/android.jar"/>
-	<classpathentry kind="lib" path="C:/Program Files/adt_Android_SDK/sdk/platforms/android-17/uiautomator.jar"/>
 	<classpathentry kind="lib" path="E:/exadel_projects/TouchtunesAutomation/TouchtunesAndroidSideTestsGitHubRepo/TanjarineTabletTests/externalLibs/apache-commons.jar"/>
 	<classpathentry exported="true" kind="lib" path="E:/exadel_projects/TouchtunesAutomation/TouchtunesAndroidSideTestsGitHubRepo/TanjarineTabletTests/externalLibs/apache-commons-lang.jar"/>
+	<classpathentry kind="lib" path="E:/InstalledSW/Android/androidSdk/platforms/android-17/android.jar"/>
+	<classpathentry kind="lib" path="E:/InstalledSW/Android/androidSdk/platforms/android-17/uiautomator.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -20,7 +20,8 @@
 
 ::2nd alternative using batchTee approach from here:   http://stackoverflow.com/questions/11239924/windows-batch-tee-command
 cd  /d E:\exadel_projects\TouchtunesAutomation\TouchtunesAndroidSideTestsGitHubRepo\TanjarineTabletTests   | batchTee testResults.txt
-call android.bat create uitest-project -n TanjarineTabletTests -t 17 -p .   
+::call android.bat create uitest-project -n TanjarineTabletTests -t 17 -p .   
+call android.bat create uitest-project -n TanjarineTabletTests -t 29 -p .   
 call ant build  
 adb  push ./bin/TanjarineTabletTests.jar /data/local/tmp    | batchTee testResults.txt + 
 echo ======1st suite: Navigation tests ===============   | batchTee testResults.txt + 

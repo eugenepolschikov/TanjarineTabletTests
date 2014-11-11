@@ -59,7 +59,7 @@ INSTRUMENTATION_STATUS: test=test4DropExistingTable
 INSTRUMENTATION_STATUS_CODE: 0
 INSTRUMENTATION_STATUS: stream=
 Test results for WatcherResultPrinter=....
-Time: 39.811
+Time: 49.498
 
 OK (4 tests)
 
@@ -139,11 +139,10 @@ INSTRUMENTATION_STATUS: test=test5GetBackToDashboardAndDropTheTable
 INSTRUMENTATION_STATUS_CODE: 0
 INSTRUMENTATION_STATUS: stream=
 Test results for WatcherResultPrinter=.....
-Time: 61.192
+Time: 60.929
 
 OK (5 tests)
 
 
 INSTRUMENTATION_STATUS_CODE: -1
-======test suites execution finished!
- ===============   
+======test suites execution finished! ===============   
